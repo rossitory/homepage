@@ -2,5 +2,8 @@
 import IndexSection from '~/components/sections/IndexSection.vue'
 </script>
 <template>
-  <IndexSection />
+  <!--Do some Tailwind styles-->
+  <div class="">
+    <IndexSection />
+  </div>
 </template>
