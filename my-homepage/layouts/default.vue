@@ -11,7 +11,7 @@
       </nav>
     </header>
     <main>
-      <Nuxt />
+      <NuxtPage />
     </main>
   </div>
 </template>
