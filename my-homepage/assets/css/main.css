@@ -5,3 +5,31 @@
 body {
   @apply bg-customBackground;
 }
+
+.custom-paragraph {
+  @apply text-lg text-customOnBackground max-w-xl;
+}
+
+.custom-header {
+  @apply text-5xl text-customOnBackground font-bold;
+}
+
+.custom-table-header {
+  @apply text-xl text-customOnBackground font-bold;
+}
+
+.custom-table-item {
+  @apply text-lg text-customPrimary;
+}
+
+.custom-button {
+  @apply border-2 border-customPrimary text-customPrimary font-bold py-2 px-4 rounded hover:bg-customPrimaryLight hover:text-white transition duration-300;
+}
+
+.custom-list-item {
+  @apply text-2xl text-customOnBackground;
+}
+
+.custom-list-item li {
+  @apply mb-2;
+}

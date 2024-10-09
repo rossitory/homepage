@@ -14,6 +14,7 @@ module.exports = {
         customBackground: '#121212',
         customSurface: '#1d1d1d',
         customPrimary: '#bb86fc',
+        customPrimaryLight: '#B980FF',
         customSecondary: '#03dac6',
         customOnBackground: '#c6c6c6',
         customOnSurface: '#e1e1e1',
