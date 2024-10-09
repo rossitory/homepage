@@ -64,7 +64,7 @@ const toggleDrawer = () => {
               </a>
             </li>
             <li>
-              <a href="#services" @click="toggleDrawer" class="hover:text-gray-400 flex items-center">
+              <a href="#offer" @click="toggleDrawer" class="hover:text-gray-400 flex items-center">
                 <span class="text-customPrimary mr-1">03.</span>Services
               </a>
             </li>

@@ -5,11 +5,12 @@
   <section id="about" class="flex flex-col md:flex-row items-start justify-center min-h-screen p-8 w-full">
     <div class="w-full md:w-1/2 order-2 md:order-1">
       <h1 class="custom-header mb-4">About me</h1>
-      <p class="custom-paragraph mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      <p class="custom-paragraph mb-4">
+        I’m Kevin Ross, a freelance full-stack engineer based in Portugal. I started WebDev Ross after an inspiring encounter with a business owner I met at a surf camp in Portugal. What began as a freelance opportunity quickly turned into a passion for collaborating with businesses to develop tailored digital solutions.
       </p>
-      <p class="custom-paragraph mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      <p class="custom-paragraph">Here are a few technologies I’ve been recently working with:</p>
+      <p class="custom-paragraph mb-4">I hold a Bachelor's degree in Computer Science from Bremen and spent a year studying at IST Lisbon through the Erasmus program. Currently, I’m working on my master’s thesis, which I’ll complete in 2025.</p>
+      <p class="custom-paragraph mb-4">What sets me apart? I like to keep communication relaxed and easy-going while making sure to deliver high-quality work. For me, it’s all about the best results without unnecessary complications.</p>
+      <p class="custom-paragraph mb-4">Here are a few technologies I’ve been recently working with:</p>
       <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div class="pt-4 pr-4 pb-4 pl-0">
           <h2 class="custom-table-header">Languages</h2>
@@ -35,7 +36,7 @@
             <li>Flutter</li>
           </ul>
         </div>
-        <div class="pt-4 pr-4 pb-4 col-span-2 sm:col-span-1">
+        <div class="pt-0 sm:pt-4 pr-4 pb-4 -mt-4 sm:mt-0 col-span-2 sm:col-span-1">
           <h2 class="custom-table-header">Tools</h2>
           <ul class="custom-table-item">
             <li>WordPress</li>

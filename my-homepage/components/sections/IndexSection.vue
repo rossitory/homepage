@@ -7,9 +7,7 @@
     <h1 class="text-5xl font-bold mb-2">Kevin Ross.</h1>
     <h1 class="text-4xl font-semibold mb-4">I am a Fullstack Engineer.</h1>
     <p class="custom-paragraph">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
-      took a galley of type and scrambled it to make a type specimen book.
+      This year, I founded WebDev Ross. After gaining experience in different areas of software development, I decided to build my own path as a freelancer. My passion is helping businesses bring their digital ideas to life, from websites to complex web applications, and automating processes to make operations smoother. Let’s make your vision a reality with a laid-back, straightforward approach.
     </p>
   </section>
 </template>

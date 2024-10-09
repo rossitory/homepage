@@ -1,8 +1,10 @@
 <template>
-  <div class="flex flex-col items-center text-center p-4">
-    <img :src="image" alt="Icon" class="h-16 w-16 mb-4">
-    <h3 class="text-xl font-semibold mb-2">{{ title }}</h3>
-    <p class="text-base">{{ text }}</p>
+  <div class="flex flex-col">
+    <div class="">
+      <img :src="image" alt="Icon" class="h-16 w-16 mb-4">
+    </div>
+    <h3 class="custom-table-header">{{ title }}</h3>
+    <p class="custom-paragraph">{{ text }}</p>
   </div>
 </template>
 
@@ -24,6 +26,3 @@ const props = defineProps({
 
 const { title, image, text } = props;
 </script>
-
-<style scoped>
-</style>
