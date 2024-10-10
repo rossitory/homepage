@@ -6,6 +6,13 @@ body {
   @apply bg-customBackground;
 }
 
+p {
+  @apply text-justify;
+  hyphens: auto;
+  text-align-last: left;
+  hyphenate-limit-chars: 6 3 2;
+}
+
 .custom-paragraph {
   @apply text-lg text-customOnBackground max-w-xl;
 }
