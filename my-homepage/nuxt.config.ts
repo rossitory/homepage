@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   runtimeConfig: {
-    resendApiKey: process.env.RESEND_API_KEY as string, // Resend API key for both client and server
+    resendApiKey: process.env.RESEND_API_KEY,
   },
 
   css: [
