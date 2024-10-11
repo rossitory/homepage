@@ -7,10 +7,11 @@ const form = ref({
   name: '',
   email: '',
   message: ''
-})
+});
 
 const isSubmitting = ref(false);
 const responseMessage = ref<string | null>(null);
+const showThankYou = ref(false);
 
 const submitForm = async () => {
   isSubmitting.value = true;
@@ -30,6 +31,8 @@ const submitForm = async () => {
     }
     
     responseMessage.value = 'Your message has been sent successfully!';
+    showThankYou.value = true; // Show thank you message
+    showForm.value = false; // Hide the form
   } catch (error) {
     responseMessage.value = 'There was an error sending your message. Please try again.';
   } finally {
@@ -48,11 +51,11 @@ const toggleForm = () => {
     <p class="custom-paragraph mb-4">
       If you’re looking for a developer who values easy-going, personal communication and is dedicated to delivering the best possible result for your project, feel free to reach out. I’d love to hear about your ideas and how we can make them happen!
     </p>
-    <div v-if="!showForm">
+    <div v-if="!showForm && !showThankYou">
       <button class="custom-button" @click="toggleForm">Say hello</button>
     </div>
     
-    <div v-if="showForm" class="mt-4 w-full md:w-1/2">
+    <div v-if="showForm && !showThankYou" class="mt-4 w-full md:w-1/2">
       <form class="flex flex-col space-y-4" @submit.prevent="submitForm">
         <div>
           <label for="name" class="block text-sm font-medium text-customOnBackground">Your Name</label>
@@ -69,24 +72,29 @@ const toggleForm = () => {
         <p class="text-xs text-customOnBackground">By clicking send, you agree to receive an e-mail by me.</p>
         <button type="submit" class="custom-button self-start" :disabled="isSubmitting">Send</button>
       </form>
-      <div class="mt-8 text-sm text-customOnBackground">
-        <h3 class="text-lg font-semibold mb-2">Impressum</h3>
-        <div class="flex items-center mb-1">
-          <i class="fas fa-building mr-2"></i>
-          <span>WebDev Ross</span>
-        </div>
-        <div class="flex items-center mb-1">
-          <i class="fas fa-user mr-2"></i>
-          <span>Kevin Ross</span>
-        </div>
-        <div class="flex items-center mb-1">
-          <i class="fas fa-map-marker-alt mr-2"></i>
-          <span>Johann-Beckmann-Str. 5, 27318 Hoya</span>
-        </div>
-        <div class="flex items-center">
-          <i class="fas fa-envelope mr-2"></i>
-          <span><a href="mailto:rossletterbox@gmail.com" class="underline">rossletterbox@gmail.com</a></span>
-        </div>
+    </div>
+
+    <div v-if="showThankYou" class="mt-4 w-full md:w-1/2">
+      <h3 class="text-lg font-semibold mb-2">Thank you for your message. I'll get in touch with you soon!</h3>
+    </div>
+
+    <div class="mt-8 text-sm text-customOnBackground">
+      <h3 class="text-lg font-semibold mb-2">Impressum</h3>
+      <div class="flex items-center mb-1">
+        <i class="fas fa-building mr-2"></i>
+        <span>WebDev Ross</span>
+      </div>
+      <div class="flex items-center mb-1">
+        <i class="fas fa-user mr-2"></i>
+        <span>Kevin Ross</span>
+      </div>
+      <div class="flex items-center mb-1">
+        <i class="fas fa-map-marker-alt mr-2"></i>
+        <span>Johann-Beckmann-Str. 5, 27318 Hoya</span>
+      </div>
+      <div class="flex items-center">
+        <i class="fas fa-envelope mr-2"></i>
+        <span><a href="mailto:rossletterbox@gmail.com" class="underline">rossletterbox@gmail.com</a></span>
       </div>
     </div>
   </section>
