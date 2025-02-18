@@ -31,8 +31,8 @@ const submitForm = async () => {
     }
     
     responseMessage.value = 'Your message has been sent successfully!';
-    showThankYou.value = true; // Show thank you message
-    showForm.value = false; // Hide the form
+    showThankYou.value = true;
+    showForm.value = false;
   } catch (error) {
     responseMessage.value = 'There was an error sending your message. Please try again.';
   } finally {
@@ -46,10 +46,10 @@ const toggleForm = () => {
 </script>
 
 <template>
-  <section id="contact" class="flex flex-col min-h-screen text-white p-8">
+  <section id="contact" class="flex flex-col min-h-screen text-white pt-8">
     <h2 class="custom-header mb-4">Get in <span class="text-customPrimary">touch.</span></h2>
-    <p class="custom-paragraph mb-4">
-      If you’re looking for a developer who values easy-going, personal communication and is dedicated to delivering the best possible result for your project, feel free to reach out. I’d love to hear about your ideas and how we can make them happen!
+    <p class="custom-paragraph mb-4 max-w-2xl">
+      If you’re looking for a developer who values straightforward, personal communication and is dedicated to delivering outstanding results, let’s talk. I’d love to hear your ideas and explore how we can bring them to life.
     </p>
     <div v-if="!showForm && !showThankYou">
       <button class="custom-button" @click="toggleForm">Say hello</button>
@@ -58,15 +58,15 @@ const toggleForm = () => {
     <div v-if="showForm && !showThankYou" class="mt-4 w-full md:w-1/2">
       <form class="flex flex-col space-y-4" @submit.prevent="submitForm">
         <div>
-          <label for="name" class="block text-sm font-medium text-customOnBackground">Your Name</label>
+          <label for="name" class="block text-md font-mono text-customOnBackground">Your Name</label>
           <input v-model="form.name" type="text" id="name" class="mt-1 block w-full px-3 py-2 bg-customSurface text-customOnSurface border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         </div>
         <div>
-          <label for="email" class="block text-sm font-medium text-customOnBackground">Your Email</label>
+          <label for="email" class="block text-md font-mono text-customOnBackground">Your Email</label>
           <input v-model="form.email" type="email" id="email" class="mt-1 block w-full px-3 py-2 bg-customSurface text-customOnSurface border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         </div>
         <div>
-          <label for="message" class="block text-sm font-medium text-customOnBackground">Your Message</label>
+          <label for="message" class="block text-md font-mono text-customOnBackground">Your Message</label>
           <textarea v-model="form.message" id="message" rows="4" class="mt-1 block w-full px-3 py-2 bg-customSurface text-customOnSurface border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
         </div>
         <p class="text-xs text-customOnBackground">By clicking send, you agree to receive an e-mail by me.</p>
@@ -78,8 +78,8 @@ const toggleForm = () => {
       <h3 class="text-lg font-semibold mb-2">Thank you for your message. I'll get in touch with you soon!</h3>
     </div>
 
-    <div class="mt-8 text-sm text-customOnBackground">
-      <h3 class="text-lg font-semibold mb-2">Impressum</h3>
+    <div class="mt-8 text-sm text-customOnBackground font-mono">
+      <h2 class="text-lg font-sans font-semibold mb-2">Impressum</h2>
       <div class="flex items-center mb-1">
         <i class="fas fa-building mr-2"></i>
         <span>WebDev Ross</span>

@@ -7,14 +7,21 @@ body {
 }
 
 p {
-  @apply text-justify;
+  @apply text-left font-mono;
   hyphens: auto;
-  text-align-last: left;
   hyphenate-limit-chars: 6 3 2;
 }
 
+h1 {
+  @apply text-left font-sans;
+}
+
+h2 {
+  @apply text-left font-mono;
+}
+
 .custom-paragraph {
-  @apply text-lg text-customOnBackground max-w-xl;
+  @apply text-lg text-customOnBackground;
 }
 
 .custom-header {
@@ -22,15 +29,15 @@ p {
 }
 
 .custom-table-header {
-  @apply text-xl text-customOnBackground font-bold;
+  @apply text-xl text-customOnBackground font-bold font-sans mb-4 pr-8;
 }
 
 .custom-table-item {
-  @apply text-lg text-customPrimary;
+  @apply text-lg text-customPrimary font-mono;
 }
 
 .custom-button {
-  @apply border-2 border-customPrimary text-customPrimary font-bold py-2 px-4 rounded hover:bg-customPrimaryLight hover:text-white transition duration-300;
+  @apply border-2 border-customPrimary text-customPrimary font-semibold py-2 px-4 rounded hover:border-customPrimaryLight hover:text-customPrimaryLight transition duration-300;
 }
 
 .custom-list-item {
@@ -39,4 +46,8 @@ p {
 
 .custom-list-item li {
   @apply mb-2;
+}
+
+.navbarItemSuffix {
+  @apply text-2xl text-customOnBackground hover:text-white;
 }
