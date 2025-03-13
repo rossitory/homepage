@@ -7,7 +7,9 @@ useHead({
     // OpenGraph (for WhatsApp, Facebook, LinkedIn)
     { property: 'og:title', content: 'WebDev Ross – Modern Web Applications & Websites' },
     { property: 'og:description', content: 'I build fast, intuitive websites and web applications designed for performance and usability.' },
-    { property: 'og:image', content: 'https://www.webdev-ross.com/og-image.jpg?v=2' },
+    { property: 'og:image', content: 'https://www.webdev-ross.com/og-image.jpg?v=3' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
     { property: 'og:url', content: 'https://www.webdev-ross.com' },
     { property: 'og:type', content: 'website' },
 
