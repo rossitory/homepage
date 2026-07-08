@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 body {
-  @apply bg-customBackground;
+  @apply bg-customBackground text-customOnBackground antialiased;
 }
 
 p {
-  @apply text-left font-mono;
+  @apply text-left font-sans;
+  line-height: 1.7;
   hyphens: auto;
   hyphenate-limit-chars: 6 3 2;
 }
@@ -21,11 +22,71 @@ h2 {
 }
 
 .custom-paragraph {
-  @apply text-lg text-customOnBackground;
+  @apply text-lg text-customOnBackground/85;
 }
 
 .custom-header {
-  @apply text-5xl text-customOnBackground font-bold;
+  @apply text-5xl text-customOnBackground font-bold tracking-tight;
+}
+
+.page-section {
+  @apply py-12 md:py-14;
+}
+
+.hero-section {
+  @apply pt-16 md:pt-20 pb-12 md:pb-14;
+}
+
+.hero-kicker {
+  @apply text-sm sm:text-base uppercase tracking-[0.35em] text-customPrimary font-semibold;
+}
+
+.hero-title {
+  @apply text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-customOnBackground;
+}
+
+.hero-subtitle {
+  @apply text-2xl sm:text-3xl font-semibold text-customPrimary;
+}
+
+.hero-copy,
+.section-copy {
+  @apply text-lg text-customOnBackground/85 max-w-3xl;
+}
+
+.section-title {
+  @apply text-4xl sm:text-5xl font-bold tracking-tight text-customOnBackground;
+}
+
+.feature-card,
+.case-study-card,
+.contact-card,
+.tech-stack-card {
+  @apply rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 shadow-[0_24px_80px_rgba(0,0,0,0.24)] backdrop-blur-sm;
+}
+
+.feature-card {
+  @apply flex h-full flex-col;
+}
+
+.feature-icon {
+  @apply h-10 w-10 text-customPrimary;
+}
+
+.feature-title {
+  @apply mt-5 text-xl font-semibold text-customOnBackground;
+}
+
+.tech-stack-card {
+  @apply flex flex-col justify-between;
+}
+
+.tech-stack-label {
+  @apply text-sm uppercase tracking-[0.3em] text-customPrimary font-semibold;
+}
+
+.tech-badge {
+  @apply inline-flex items-center rounded-full border border-customPrimary/30 bg-customPrimary/10 px-3 py-1 text-sm font-medium text-customOnBackground;
 }
 
 .custom-table-header {
@@ -37,7 +98,7 @@ h2 {
 }
 
 .custom-button {
-  @apply border-2 border-customPrimary text-customPrimary font-semibold py-2 px-4 rounded hover:border-customPrimaryLight hover:text-customPrimaryLight transition duration-300;
+  @apply inline-flex items-center justify-center rounded-full border border-customPrimary px-5 py-3 text-sm font-semibold tracking-wide text-customPrimary transition duration-300 hover:border-customPrimaryLight hover:bg-customPrimary/10 hover:text-customPrimaryLight;
 }
 
 .custom-list-item {
@@ -50,4 +111,8 @@ h2 {
 
 .navbarItemSuffix {
   @apply text-2xl text-customOnBackground hover:text-white;
+}
+
+section {
+  scroll-margin-top: 6rem;
 }

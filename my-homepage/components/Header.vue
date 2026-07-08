@@ -32,7 +32,7 @@ const toggleDrawer = () => {
         </li>
         <li class="relative">
           <a href="#about" class="group text-customOnBackground hover:text-customPrimary pl-8 flex items-center transition-opacity duration-500">
-            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>About
+            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>Case Study
           </a>
         </li>
         <li class="relative">
@@ -63,7 +63,7 @@ const toggleDrawer = () => {
             </li>
             <li>
               <a href="#about" @click="toggleDrawer" class="group hover:text-gray-400 flex items-center transition-opacity duration-500">
-                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>About
+                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>Case Study
               </a>
             </li>
             <li>

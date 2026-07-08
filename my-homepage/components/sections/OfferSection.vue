@@ -1,15 +1,36 @@
 <script lang="ts" setup>
-import { MonitorCog, MonitorSmartphone, Smartphone } from 'lucide-vue-next'
+import { Code2, Smartphone, Workflow } from 'lucide-vue-next'
+
+const services = [
+  {
+    title: 'Custom SaaS & Web Platforms',
+    text: 'Architecting and developing highly scalable, custom-built web applications and booking systems using modern frameworks like Vue.js and Nuxt.',
+    icon: Code2,
+  },
+  {
+    title: 'Native Mobile Apps',
+    text: 'Designing and developing cross-platform mobile solutions with Flutter and Dart, integrating complex features and ensuring smooth hardware communication.',
+    icon: Smartphone,
+  },
+  {
+    title: 'API Design & System Migration',
+    text: 'Modernizing legacy infrastructure by migrating third-party tools into robust in-house solutions powered by Symfony, PHP, and scalable REST APIs.',
+    icon: Workflow,
+  },
+]
 </script>
 
 <template>
-  <section id="offer" class="min-h-screen pt-8 mb-28 sm:mb-0">
-    <h2 class="custom-header mb-8">What I can <span class="text-customPrimary">do for you.</span></h2>
-    <div class="flex flex-wrap gap-4">
-
-      <InfoRow title="Websites that work for you" :icon="MonitorSmartphone" text="I specialize in creating responsive, user-friendly websites that fit your business like a glove. Whether you’re kicking off a new brand or giving your current one a fresh look, I’ll build a site that captures your vibe and keeps your audience engaged." />
-      <InfoRow title="Web Applications" :icon="MonitorCog" text="Need a custom solution? From booking systems to complex platforms, I build web applications that scale with your business. I focus on crafting smooth user experiences on the frontend, while ensuring your backend is powerful and maintainable." />
-      <InfoRow title="Mobile Apps" :icon="Smartphone" text="Whether it’s a custom mobile app or advanced features, I build dynamic solutions that evolve with your business. I focus on creating apps that deliver a smooth user experience, solid performance, and the scalability you’ll need as you grow." /> 
+  <section id="offer" class="page-section">
+    <div class="max-w-6xl">
+      <h2 class="section-title mb-8">Engineering Services.</h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        <article v-for="service in services" :key="service.title" class="feature-card">
+          <component :is="service.icon" class="feature-icon" aria-hidden="true" />
+          <h3 class="feature-title">{{ service.title }}</h3>
+          <p class="section-copy mt-4">{{ service.text }}</p>
+        </article>
+      </div>
     </div>
   </section>
-</template>"
+</template>
