@@ -2,7 +2,7 @@
 const techStacks = [
   {
     label: 'Frontend',
-    items: ['TypeScript', 'Vue.js', 'Nuxt.js', 'React'],
+    items: ['TypeScript', 'Vue.js', 'Nuxt.js'],
   },
   {
     label: 'Backend & APIs',

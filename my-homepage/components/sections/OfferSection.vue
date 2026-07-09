@@ -24,11 +24,11 @@ const services = [
   <section id="offer" class="page-section">
     <div class="max-w-6xl">
       <h2 class="section-title mb-8">Engineering Services.</h2>
-      <div class="grid gap-4 md:grid-cols-3">
-        <article v-for="service in services" :key="service.title" class="feature-card">
+      <div class="grid gap-5 md:grid-cols-3">
+        <article v-for="service in services" :key="service.title" class="feature-card w-full">
           <component :is="service.icon" class="feature-icon" aria-hidden="true" />
           <h3 class="feature-title">{{ service.title }}</h3>
-          <p class="section-copy mt-4">{{ service.text }}</p>
+          <p class="service-copy mt-4">{{ service.text }}</p>
         </article>
       </div>
     </div>

@@ -22,40 +22,40 @@ h2 {
 }
 
 .custom-paragraph {
-  @apply text-lg text-customOnBackground/85;
+  @apply text-lg sm:text-xl text-customOnBackground/90;
 }
 
 .custom-header {
-  @apply text-5xl text-customOnBackground font-bold tracking-tight;
+  @apply text-6xl text-customOnBackground font-bold tracking-tight;
 }
 
 .page-section {
-  @apply py-12 md:py-14;
+  @apply py-16 md:py-20;
 }
 
 .hero-section {
-  @apply pt-16 md:pt-20 pb-12 md:pb-14;
+  @apply pt-20 md:pt-24 pb-16 md:pb-20;
 }
 
 .hero-kicker {
-  @apply text-sm sm:text-base uppercase tracking-[0.35em] text-customPrimary font-semibold;
+  @apply text-base sm:text-lg uppercase tracking-[0.35em] text-customPrimary font-semibold;
 }
 
 .hero-title {
-  @apply text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-customOnBackground;
+  @apply text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-customOnBackground;
 }
 
 .hero-subtitle {
-  @apply text-2xl sm:text-3xl font-semibold text-customPrimary;
+  @apply text-3xl sm:text-4xl font-semibold text-customPrimary;
 }
 
 .hero-copy,
 .section-copy {
-  @apply text-lg text-customOnBackground/85 max-w-3xl;
+  @apply text-lg sm:text-xl text-customOnBackground/90 max-w-3xl;
 }
 
 .section-title {
-  @apply text-4xl sm:text-5xl font-bold tracking-tight text-customOnBackground;
+  @apply text-5xl sm:text-6xl font-bold tracking-tight text-customOnBackground;
 }
 
 .feature-card,
@@ -70,11 +70,19 @@ h2 {
 }
 
 .feature-icon {
-  @apply h-10 w-10 text-customPrimary;
+  @apply h-12 w-12 text-customPrimary;
 }
 
 .feature-title {
-  @apply mt-5 text-xl font-semibold text-customOnBackground;
+  @apply mt-6 text-3xl font-bold text-customOnBackground;
+}
+
+.feature-card p {
+  @apply mt-4;
+}
+
+.case-study-card {
+  @apply border-l-4 border-l-customPrimary bg-black/20;
 }
 
 .tech-stack-card {
@@ -82,23 +90,28 @@ h2 {
 }
 
 .tech-stack-label {
-  @apply text-sm uppercase tracking-[0.3em] text-customPrimary font-semibold;
+  @apply text-base uppercase tracking-[0.3em] text-customPrimary font-semibold;
 }
 
 .tech-badge {
-  @apply inline-flex items-center rounded-full border border-customPrimary/30 bg-customPrimary/10 px-3 py-1 text-sm font-medium text-customOnBackground;
+  @apply inline-flex items-center rounded-full border border-customPrimary/30 bg-customPrimary/10 px-3 py-1 text-base font-medium text-customOnBackground;
 }
 
 .custom-table-header {
-  @apply text-xl text-customOnBackground font-bold font-sans mb-4 pr-8;
+  @apply text-2xl text-customOnBackground font-bold font-sans mb-4 pr-8;
 }
 
 .custom-table-item {
-  @apply text-lg text-customPrimary font-mono;
+  @apply text-xl text-customPrimary font-mono;
 }
 
 .custom-button {
-  @apply inline-flex items-center justify-center rounded-full border border-customPrimary px-5 py-3 text-sm font-semibold tracking-wide text-customPrimary transition duration-300 hover:border-customPrimaryLight hover:bg-customPrimary/10 hover:text-customPrimaryLight;
+  @apply inline-flex items-center justify-center rounded-full border border-customPrimary px-5 py-3 text-base font-semibold tracking-wide text-customPrimary transition duration-300 hover:border-customPrimaryLight hover:bg-customPrimary/10 hover:text-customPrimaryLight;
+}
+
+.custom-button,
+.tech-badge {
+  min-height: 48px;
 }
 
 .custom-list-item {
@@ -114,5 +127,51 @@ h2 {
 }
 
 section {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 7rem;
+}
+
+@media (max-width: 768px) {
+  .custom-paragraph,
+  .hero-copy,
+  .section-copy,
+  .service-copy {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .tech-stack-label {
+    @apply text-base;
+  }
+
+  .tech-badge {
+    @apply px-4 py-2 text-base;
+  }
+
+  .feature-icon {
+    @apply h-14 w-14;
+  }
+
+  .feature-card {
+    @apply p-8;
+  }
+
+  .feature-title {
+    @apply mt-4 text-3xl;
+  }
+
+  .hero-title {
+    @apply text-5xl;
+  }
+
+  .custom-header {
+    @apply text-5xl;
+  }
+
+  .section-title {
+    @apply text-4xl;
+  }
+
+  .custom-button {
+    min-height: 48px;
+  }
 }
