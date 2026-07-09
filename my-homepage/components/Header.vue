@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 
 const isDrawerOpen = ref(false);
+const cvDownloadUrl = '/cv-kevin-ross-jul-26.pdf';
 
 const toggleDrawer = () => {
   isDrawerOpen.value = !isDrawerOpen.value;
@@ -31,18 +32,18 @@ const toggleDrawer = () => {
           </a>
         </li>
         <li class="relative">
-          <a href="#about" class="group text-customOnBackground hover:text-customPrimary flex items-center transition-opacity duration-500">
-            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>Case Study
-          </a>
-        </li>
-        <li class="relative">
           <a href="#offer" class="group text-customOnBackground hover:text-customPrimary flex items-center transition-opacity duration-500">
-            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">03.</span>Services
+            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>Services
           </a>
         </li>
         <li class="relative">
           <a href="#contact" class="group text-customOnBackground hover:text-customPrimary flex items-center transition-opacity duration-500">
-            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">04.</span>Contact
+            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">03.</span>Contact
+          </a>
+        </li>
+        <li class="relative">
+          <a :href="cvDownloadUrl" download="cv-kevin-ross-jul-26.pdf" class="group text-customOnBackground hover:text-customPrimary flex items-center transition-opacity duration-500">
+            <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">04.</span>Download CV
           </a>
         </li>
       </ul>
@@ -62,18 +63,18 @@ const toggleDrawer = () => {
               </a>
             </li>
             <li>
-              <a href="#about" @click="toggleDrawer" class="group flex items-center justify-center rounded-full px-5 py-3 text-xl transition-opacity duration-500 hover:text-gray-400">
-                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>Case Study
-              </a>
-            </li>
-            <li>
               <a href="#offer" @click="toggleDrawer" class="group flex items-center justify-center rounded-full px-5 py-3 text-xl transition-opacity duration-500 hover:text-gray-400">
-                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">03.</span>Services
+                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">02.</span>Services
               </a>
             </li>
             <li>
               <a href="#contact" @click="toggleDrawer" class="group flex items-center justify-center rounded-full px-5 py-3 text-xl transition-opacity duration-500 hover:text-gray-400">
-                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">04.</span>Contact
+                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">03.</span>Contact
+              </a>
+            </li>
+            <li>
+              <a :href="cvDownloadUrl" download="cv-kevin-ross-jul-26.pdf" @click="toggleDrawer" class="group flex items-center justify-center rounded-full px-5 py-3 text-xl transition-opacity duration-500 hover:text-gray-400">
+                <span class="text-customPrimary group-hover:text-customOnBackground mr-1 transition-opacity duration-500">04.</span>Download CV
               </a>
             </li>
           </ul>
